@@ -1,2 +1,11 @@
-<p>Big round of applause for : <%= @user1 %></p>
-<input type="submit" value="Next">
+
+<%if @user1%>
+  <p>Big round of applause for : <%= @user1 %></p>
+  <form action="/start" method="post">
+    <input type="submit" value="Next">
+  </form>
+<%else%>
+  <form action="/stop" method="get">
+    <input type="submit" value="Next">
+  </form>
+<%end%>

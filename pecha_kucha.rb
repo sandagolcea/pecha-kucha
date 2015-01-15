@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class PechaKucha < Sinatra::Base
   enable :sessions
-  
+
   get '/' do
     erb :index
   end
@@ -20,6 +20,10 @@ class PechaKucha < Sinatra::Base
   post '/start' do
     @user1 = session[:user1]
     erb :start
+  end
+
+  get '/stop' do
+    erb :stop
   end
 
   # start the server if ruby file executed directly
