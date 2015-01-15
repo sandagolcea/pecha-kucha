@@ -9,26 +9,20 @@ class PechaKucha < Sinatra::Base
   end
 
   post '/' do
-
-    # puts session.inspect
-    @user1 = params[:user1]
-    @user2 = params[:user2]
-    @user3 = params[:user3]
-    @user4 = params[:user4]
-    @user5 = params[:user5]    
     
+    session[:list] << params[:user1] if ( params[:user1] && !params[:user1].empty? )
+    session[:list] << params[:user2] if ( params[:user2] && !params[:user2].empty? )
+    session[:list] << params[:user3] if ( params[:user3] && !params[:user3].empty? )
+    session[:list] << params[:user4] if ( params[:user4] && !params[:user4].empty? )
+    session[:list] << params[:user5] if ( params[:user5] && !params[:user5].empty? )
 
-    @list = []
-    @list << params[:user1] if ( params[:user1] && !params[:user1].empty? )
-    
-    session[:list] << @list if !@list.empty?
     puts session.inspect
     erb :index
   end
 
   post '/start' do
     # @user = session[:user]
-    session[:list].shuffle
+    session[:list].shuffle!
     @user = session[:list].pop
     erb :start
   end

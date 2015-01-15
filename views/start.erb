@@ -5,7 +5,8 @@
     <input type="submit" value="Next">
   </form>
 <%else%>
-  <form action="/stop" method="get">
-    <input type="submit" value="Next">
-  </form>
+  <%redirect "/stop"%>
+  <!-- <form action="/stop" method="get"> -->
+    <!-- <input type="submit" value="Next"> -->
+  <!-- </form> -->
 <%end%>
