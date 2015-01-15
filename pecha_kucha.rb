@@ -9,12 +9,10 @@ class PechaKucha < Sinatra::Base
   end
 
   post '/' do
-    
-    session[:list] << params[:user1] if ( params[:user1] && !params[:user1].empty? )
-    session[:list] << params[:user2] if ( params[:user2] && !params[:user2].empty? )
-    session[:list] << params[:user3] if ( params[:user3] && !params[:user3].empty? )
-    session[:list] << params[:user4] if ( params[:user4] && !params[:user4].empty? )
-    session[:list] << params[:user5] if ( params[:user5] && !params[:user5].empty? )
+    5.times do |i|
+      user = "user#{i}".to_sym
+      session[:list] << params[user] if ( params[user] && !params[user].empty? )    
+    end
 
     puts session.inspect
     erb :index
