@@ -1,5 +1,11 @@
-input {
-	border-top-left-radius
+section {
+	font-family: Futura;
+	font-size: 23px;
+}
+
+h1 {
+	font-family: Verdana;
+	color: #33CC66;
 }
 
 .start_button {

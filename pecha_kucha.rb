@@ -5,6 +5,7 @@ class PechaKucha < Sinatra::Base
 
   get '/' do
     session[:list] = []
+    @list = session[:list]
     erb :index
   end
 
@@ -14,6 +15,7 @@ class PechaKucha < Sinatra::Base
       session[:list] << params[user] if ( params[user] && !params[user].empty? )    
     end
 
+    @list = session[:list]
     puts session.inspect
     erb :index
   end
