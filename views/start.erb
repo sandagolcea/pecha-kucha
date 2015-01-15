@@ -1,4 +1,3 @@
-
 <%if @user %>
   <p>Big round of applause for : <%= @user %></p>
   <form action="/start" method="post">
@@ -10,3 +9,11 @@
     <!-- <input type="submit" value="Next"> -->
   <!-- </form> -->
 <%end%>
+
+<object>
+<param name="autostart" value="true">
+<param name="src" value="clap.caf">
+<param name="autoplay" value="true"> 
+<!-- <param name="controller" value="true"> -->
+<!-- <embed src="clap.caf" controller="true" autoplay="true" autostart="True" type="audio/caf" /> -->
+</object>
