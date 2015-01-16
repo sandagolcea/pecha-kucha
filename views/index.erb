@@ -1,22 +1,23 @@
-<h1>Pecha Kucha!!!!!!!!!</h1>
-<form class='table' action="/" method="post">
-  <input type="text" name="user1"><br>
-  <input type="text" name="user2"><br>
-  <input type="text" name="user3"><br>
-  <input type="text" name="user4"><br>
-  <input type="text" name="user5"><br>
+<section>
+  <h1>Pecha Kucha!!!!!!!!!</h1>
+    <form class='table' action="/" method="post">
+      <input type="text" name="user1"><br>
+      <input type="text" name="user2"><br>
+      <input type="text" name="user3"><br>
+      <input type="text" name="user4"><br>
+      <input type="text" name="user5"><br>
+      <br>
+      <input class='button' type="submit" value="Add">
+    </form>
   <br>
-  <input class='button' type="submit" value="Add">
-</form>
-<br>
+</section>
 <form action="/start" method="post">
   <input class='start_button' type="submit" value="Start Pecha Kucha">
 </form><br>
-<section>
   <% @list.each do |item| %>
     <%= item %><br>
   <% end %>
-</section>
+
 
 
 

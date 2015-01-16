@@ -1,23 +1,47 @@
 section {
 	font-family: Futura;
 	font-size: 23px;
+	margin: 0 auto;
+	width: 80%;	
+}
+
+form {
+	margin: 0 auto;
+	text-align: center;
 }
 
 h1 {
 	font-family: Verdana;
-	color: #33CC66;
+	color: #2C3E50;
+	text-align: center;
+}
+
+body {
+	background-color: #03C9A9;
+}
+
+.table {
+	margin: 0 auto;
+}
+
+.yield {
+
+
 }
 
 .start_button {
+
 	border: 2px solid;
     border-radius: 25px;
-	background-color: yellow;
+	background-color: #FDE3A7;
 	box-shadow: 10px 10px 5px #888888;
+	width: 50%; height: 5em;
 }
 
 .button {
 	border: 2px solid;
     border-radius: 25px;
-	background-color: red;
+	background-color: #F89406;
 	box-shadow: 10px 10px 5px #888888;
+	width: 20%;  height: 10%;
 }
