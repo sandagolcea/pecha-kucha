@@ -1,16 +1,23 @@
-<section>
-<h1>Pecha Kucha!!!!!!!!!</h1>
-
-<form class='table' action="/" method="post">
-    <textarea id="mytext" name="user" class="expanding"></textarea>
-    <input class='button' type="submit" value="Add">
-</form>
-
-<br>
+<h1>Pecha Kucha!</h1>
 <form action="/start" method="post">
   <input class='start_button' type="submit" value="Start Pecha Kucha">
-</form><br>
-  <% @list.each do |item| %>
-    <%= item %><br>
-  <% end %>
+</form>
+
+<section>
+  <section id='form_container'> 
+    <form class='table' action="/" method="post">
+    <section>
+    <textarea id="mytext" name="user" class="expanding">
+    </textarea>
+    </section>
+  </section>
+  <section id='add'>
+      <input class='button' type="submit" value="Add">
+    </form>
+    <section id='board'>
+    <% @list.each do |item| %>
+      <%= item %><br>
+    <% end %>
+    </section>
+  </section>
 </section>
