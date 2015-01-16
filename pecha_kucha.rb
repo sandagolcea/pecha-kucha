@@ -18,20 +18,20 @@ class PechaKucha < Sinatra::Base
       
       if (list.length > 0) 
         list.each do |user|
-          session[:list] << user
+          user.strip!
+          session[:list] << user if (user.length > 0)
         end
       end
 
     end  
 
+    session[:list].uniq!
     @list = session[:list]
-    puts session.inspect
     erb :index
 
   end
 
   post '/start' do
-    # @user = session[:user]
     session[:list].shuffle!
     @user = session[:list].pop
     erb :start
