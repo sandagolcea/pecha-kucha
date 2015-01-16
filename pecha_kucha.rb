@@ -10,14 +10,24 @@ class PechaKucha < Sinatra::Base
   end
 
   post '/' do
-    5.times do |i|
-      user = "user#{i}".to_sym
-      session[:list] << params[user] if ( params[user] && !params[user].empty? )    
-    end
+    list = []
+  
+    if ( params[:user] && !params[:user].empty? ) 
+      
+      list = params[:user].split(",") 
+      
+      if (list.length > 0) 
+        list.each do |user|
+          session[:list] << user
+        end
+      end
+
+    end  
 
     @list = session[:list]
     puts session.inspect
     erb :index
+
   end
 
   post '/start' do
