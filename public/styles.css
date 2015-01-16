@@ -15,7 +15,10 @@ body {
 	margin: 0 auto;
 	width: 80%;	
 	background-color: #03C9A9;
+}
 
+p {
+	text-align: center;
 }
 
 .start_button {
@@ -28,7 +31,7 @@ body {
 
 .button {
 	border: 2px solid;
-    border-radius: 25px;
+    border-radius: 9px;
 	background-color: #F89406;
 	box-shadow: 10px 10px 5px #888888;
 }
@@ -37,6 +40,7 @@ textarea, .textareaClone {
 	width: 1000%;
 	margin: 0 auto;
 	text-align: center;
+	font-size: 60px;
 }
 
 section {
@@ -65,4 +69,22 @@ section {
 	margin-top: 10%;
 	width: 100%;
 	height: 100%;
+}
+
+#last {
+	font-size: 100px;
+}
+
+#authors {
+	font-size: 20px;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+#enter {
+	margin-left: -36%;
+	margin-bottom: -9%;
+	font-family: italic;
+	font-size: 15px;
+	margin-top: 6%;
 }

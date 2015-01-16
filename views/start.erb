@@ -1,12 +1,14 @@
 <%if @user %>
+<center>
   <p>Big round of applause for : </p>
   <span id="countdown" style="font-size:x-large;">4</span>
   <div id="delayedText" style="visibility:hidden">
-     <p style="font-size:xx-large;"><%= @user %></p>
+     <p style="font-size: 100px;"><%= @user %>!</p>
   </div>
   <form action="/start" method="post">
     <input class='button' type="submit" value="Next">
   </form>
+</center>
 <%else%>
   <%redirect "/stop"%>
 <%end%>

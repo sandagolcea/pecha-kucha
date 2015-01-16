@@ -14,4 +14,12 @@ Feature: Start randomization
     When I fill in "mytext" with "Matteo, Sanda, Jin"
     And I press "Add"
     And I press "Start Pecha Kucha"
-    Then I should see "A big round of applause for.."
+    Then I should see "A big round of applause for.." within "start"
+
+  Scenario: Finishing the game
+    Given I am on the homepage
+    When I fill in "mytext" with "Matteo"
+    And I press "Add"
+    And I press "Start Pecha Kucha"
+    And I press "Next" within "start"
+    Then I should see "That's all!" within "stop"
