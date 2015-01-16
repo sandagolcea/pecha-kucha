@@ -1,7 +1,7 @@
 <%if @user %>
   <p>Big round of applause for : <%= @user %></p>
   <form action="/start" method="post">
-    <input type="submit" value="Next">
+    <input class='button' type="submit" value="Next">
   </form>
 <%else%>
   <%redirect "/stop"%>
@@ -10,10 +10,7 @@
   <!-- </form> -->
 <%end%>
 
-<object>
-<param name="autostart" value="true">
-<param name="src" value="applause-01.mp3">
-<param name="autoplay" value="true"> 
-<!-- <param name="controller" value="true"> -->
-<!-- <embed src="clap.caf" controller="true" autoplay="true" autostart="True" type="audio/caf" /> -->
-</object>
+<audio style='visibility:hidden;' controls autoplay>
+  <source src="applause-01.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
