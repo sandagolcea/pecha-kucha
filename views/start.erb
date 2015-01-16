@@ -1,6 +1,6 @@
 <%if @user %>
   <p>Big round of applause for : </p>
-  <span id="countdown" style="font-size:x-large;">5</span>
+  <span id="countdown" style="font-size:x-large;">4</span>
   <div id="delayedText" style="visibility:hidden">
      <p style="font-size:xx-large;"><%= @user %></p>
   </div>
@@ -12,13 +12,14 @@
 <%end%>
 
 <audio style='visibility:hidden;' controls autoplay>
-  <source src="applause-01.mp3" type="audio/mp3">
+  <!-- <source src="DrumRoll.mp3" type="audio/mp3"> -->
+  <source src="Drums.wav" type="audio/wav">
 Your browser does not support the audio element.
 </audio>
 
 <script>
 window.onload = function(){
-var theDelay = 5;
+var theDelay = 4;
 var timer = setTimeout("showText()",theDelay*1000)
 }
 function showText(){
@@ -27,7 +28,7 @@ document.getElementById("delayedText").style.visibility = "visible";
 </script>
 
 <script>
-var max_time = 5;
+var max_time = 4;
 var cinterval;
  
 function countdown_timer(){
