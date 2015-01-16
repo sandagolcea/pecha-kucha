@@ -1,5 +1,9 @@
 <%if @user %>
-  <p>Big round of applause for : <%= @user %></p>
+  <p>Big round of applause for : </p>
+  <span id="countdown" style="font-size:x-large;">5</span>
+  <div id="delayedText" style="visibility:hidden">
+     <p style="font-size:xx-large;"><%= @user %></p>
+  </div>
   <form action="/start" method="post">
     <input class='button' type="submit" value="Next">
   </form>
@@ -11,3 +15,29 @@
   <source src="applause-01.mp3" type="audio/mp3">
 Your browser does not support the audio element.
 </audio>
+
+<script>
+window.onload = function(){
+var theDelay = 5;
+var timer = setTimeout("showText()",theDelay*1000)
+}
+function showText(){
+document.getElementById("delayedText").style.visibility = "visible";
+}
+</script>
+
+<script>
+var max_time = 5;
+var cinterval;
+ 
+function countdown_timer(){
+  // decrease timer
+  max_time--;
+  document.getElementById('countdown').innerHTML = max_time;
+  if(max_time == 0){
+    clearInterval(cinterval);
+    document.getElementById('countdown').style.visibility = "hidden";
+  }
+}
+cinterval = setInterval('countdown_timer()', 1000);
+</script>
