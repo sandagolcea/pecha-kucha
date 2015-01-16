@@ -31,7 +31,7 @@ p {
 
 .button {
 	border: 2px solid;
-    border-radius: 25px;
+    border-radius: 9px;
 	background-color: #F89406;
 	box-shadow: 10px 10px 5px #888888;
 }
@@ -79,5 +79,12 @@ section {
 	font-size: 20px;
 	margin-right: 0;
 	margin-bottom: 0;
+}
 
+#enter {
+	margin-left: -36%;
+	margin-bottom: -9%;
+	font-family: italic;
+	font-size: 15px;
+	margin-top: 6%;
 }
