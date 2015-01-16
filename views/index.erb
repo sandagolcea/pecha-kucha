@@ -1,14 +1,15 @@
+<section>
 <h1>Pecha Kucha!!!!!!!!!</h1>
+
 <form class='table' action="/" method="post">
-  <textarea id="mytext" name="user" class="expanding"></textarea>
-  <br>
-  <input class='button' type="submit" value="Add">
+    <textarea id="mytext" name="user" class="expanding"></textarea>
+    <input class='button' type="submit" value="Add">
 </form>
+
 <br>
 <form action="/start" method="post">
   <input class='start_button' type="submit" value="Start Pecha Kucha">
 </form><br>
-<section>
   <% @list.each do |item| %>
     <%= item %><br>
   <% end %>
